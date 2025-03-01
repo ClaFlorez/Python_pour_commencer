@@ -1,35 +1,40 @@
-# Introducción a Python
-Python es un lenguaje de programación creado por el holandés Guido van Rossum alrededor de 1991. Es un proyecto de código abierto, y su sitio web oficial es [www.python.org](https://www.python.org).
+# Introduction à Python
 
-## Características principales de Python
+Python est un langage de programmation créé par le Néerlandais Guido van Rossum vers 1991. C'est un projet open-source, et son site officiel est [www.python.org](https://www.python.org).
 
-- **Fácil de aprender y usar**: Python tiene una sintaxis simple y clara, similar al inglés, lo que facilita su lectura y escritura.
-- **Versatilidad**: Se utiliza en desarrollo web, software, matemáticas, scripting de sistemas y más.
-- **Multiplataforma**: Funciona en diversos sistemas operativos como Windows, Mac y Linux.
-- **Código abierto y gratuito**: Python es de uso libre y tiene una gran comunidad de desarrolladores.
-- **Desarrollo rápido**: Permite crear prototipos y aplicaciones en menos tiempo que otros lenguajes.
-- **Tipado dinámico**: Las variables pueden cambiar de tipo durante la ejecución del programa.
-- **Gestión automática de memoria**: No es necesario asignar y liberar memoria manualmente.
-- **Orientado a objetos**: Soporta programación orientada a objetos.
-- **Amplia biblioteca estándar**: Incluye módulos para diversas tareas, desde GUI hasta programación web.
+## Caractéristiques principales de Python
 
-## Versiones de Python
+- **Facile à apprendre et à utiliser** : Python a une syntaxe simple et claire, proche de l'anglais, ce qui facilite sa lecture et son écriture.
+- **Polyvalence** : Il est utilisé dans le développement web, les logiciels, les mathématiques, le scripting système et plus encore.
+- **Multiplateforme** : Il fonctionne sur divers systèmes d'exploitation comme Windows, Mac et Linux.
+- **Open-source et gratuit** : Python est libre d'utilisation et possède une grande communauté de développeurs.
+- **Développement rapide** : Il permet de créer des prototypes et des applications plus rapidement que d'autres langages.
+- **Typage dynamique** : Les variables peuvent changer de type pendant l'exécution du programme.
+- **Gestion automatique de la mémoire** : Il n'est pas nécessaire d'allouer et de libérer manuellement la mémoire.
+- **Orienté objet** : Il supporte la programmation orientée objet.
+- **Large bibliothèque standard** : Il inclut des modules pour diverses tâches, de l'interface graphique à la programmation web.
 
-Python ha evolucionado a lo largo de los años, con tres versiones principales:
+## Versions de Python
 
-1. **Python 1**: La versión inicial.
-2. **Python 2**: Lanzada en 2000, introdujo el recolector de basura y soporte para Unicode.
-3. **Python 3 (Python 3000 o py3k)**: Lanzada en 2008, es una actualización importante no compatible con Python 2.
+Python a évolué au fil des ans, avec trois versions principales :
+
+1. **Python 1** : La version initiale.
+2. **Python 2** : Lancée en 2000, elle a introduit le ramasse-miettes et le support de l'Unicode.
+3. **Python 3 (Python 3000 ou py3k)** : Lancée en 2008, c'est une mise à jour majeure non compatible avec Python 2.
 
 ## Python 2 vs Python 3
 
-Actualmente, Python 2 y Python 3 coexisten, pero no son compatibles entre sí. Python 3 introdujo cambios significativos que rompieron la compatibilidad con la versión anterior. Es importante tener en cuenta:
+Actuellement, Python 2 et Python 3 coexistent, mais ne sont pas compatibles entre eux. Python 3 a introduit des changements significatifs qui ont rompu la compatibilité avec la version précédente. Il est important de noter :
 
-- Para nuevos proyectos, se recomienda usar **Python 3**.
-- **Python 2** se mantiene principalmente para proyectos legacy.
-- Para verificar la versión instalada, se puede usar el comando `python --version` en la línea de comandos.
+- Pour les nouveaux projets, il est recommandé d'utiliser **Python 3**.
+- **Python 2** est principalement maintenu pour les projets existants.
+- Pour vérifier la version installée, on peut utiliser la commande `python --version` dans la ligne de commande.
 
-## Documentación
+## Documentation
 
-La documentación oficial de Python, incluyendo tutoriales y referencias del lenguaje, está disponible en [https://docs.python.org](https://docs.python.org). Esta documentación es un recurso valioso para aprender y dominar el lenguaje, ofreciendo guías detalladas y ejemplos para programadores de todos los niveles.
-# Python_pour_commencer
+La documentation officielle de Python, comprenant des tutoriels et des références du langage, est disponible sur [https://docs.python.org](https://docs.python.org). Cette documentation est une ressource précieuse pour apprendre et maîtriser le langage, offrant des guides détaillés et des exemples pour les programmeurs de tous niveaux.
+
+## Logo de Python
+
+![Logo de Python](https://www.python.org/static/community_logos/python-logo-v3-TM-flat.png)
+
