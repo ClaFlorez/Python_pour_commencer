@@ -36,5 +36,5 @@ La documentation officielle de Python, comprenant des tutoriels et des référen
 
 ## Logo de Python
 
-![Logo de Python](https://www.python.org/static/community_logos/python-logo-v3-TM-flat.png)
+!(logo-python.png)
 
