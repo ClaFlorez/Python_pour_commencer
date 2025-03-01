@@ -1,10 +1,10 @@
 # Introduction à Python
 
-<div style="text-align: center;">
-    <img src="logo-python.png" alt="logo-python" width="33%">
+<div style="display: flex; justify-content: center;">
+    <img src="./logo-python.png" alt="Logo de Python" width="33%" title="Logo de Python">
 </div>
 
-Python est un langage de programmation créé par le Néerlandais Guido van Rossum vers 1991. C'est un projet open-source, et son site officiel est [www.python.org](https://www.python.org).
+Python est un langage de programmation créé par le Néerlandais Guido van Rossum vers 1991. C'est un projet open-source, et son site officiel est [www.python.org](https://www.python.org/).
 
 ## Caractéristiques principales de Python
 
@@ -24,7 +24,7 @@ Python a évolué au fil des ans, avec trois versions principales :
 
 1. **Python 1** : La version initiale.
 2. **Python 2** : Lancée en 2000, elle a introduit le ramasse-miettes et le support de l'Unicode.
-3. **Python 3 (Python 3000 ou py3k)** : Lancée en 2008, c'est une mise à jour majeure non compatible avec Python 2.
+3. **Python 3** (Python 3000 ou py3k) : Lancée en 2008, c'est une mise à jour majeure non compatible avec Python 2.
 
 ## Python 2 vs Python 3
 
@@ -36,6 +36,6 @@ Actuellement, Python 2 et Python 3 coexistent, mais ne sont pas compatibles entr
 
 ## Documentation
 
-La documentation officielle de Python, comprenant des tutoriels et des références du langage, est disponible sur [https://docs.python.org](https://docs.python.org). Cette documentation est une ressource précieuse pour apprendre et maîtriser le langage, offrant des guides détaillés et des exemples pour les programmeurs de tous niveaux.
+La documentation officielle de Python, comprenant des tutoriels et des références du langage, est disponible sur [docs.python.org](https://docs.python.org/). Cette documentation est une ressource précieuse pour apprendre et maîtriser le langage, offrant des guides détaillés et des exemples pour les programmeurs de tous niveaux.
 
 
