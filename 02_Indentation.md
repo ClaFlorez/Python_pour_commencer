@@ -5,6 +5,7 @@ Un bloc est un groupe d'instructions s'exécutant comme une unité. Contrairemen
 Une instruction composée, telle qu'une condition (`if-else`), une boucle (`while`, `for`) ou une définition de fonction (`def`), commence par une ligne d'en-tête terminée par deux-points (`:`), suivie d'un bloc de code indenté, comme suit :
 
 ```python
+
 en_tete_1:          # Les en-têtes se terminent par un deux-points
     instruction_1_1  # Les blocs de code sont indentés (il est recommandé d'utiliser 4 espaces)
     instruction_1_2
