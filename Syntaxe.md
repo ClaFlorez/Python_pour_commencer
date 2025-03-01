@@ -23,25 +23,25 @@ Une instruction Python est délimitée par un saut de ligne. Une instruction ne 
 x = 1     # Assign 1 to variable x
 print(x)  # Print the value of the variable x
 ```
-# Output: 1
+> Output: 1
 ```python
 x + 1
 ```
-# Output: 2
+> Output: 2
 ```python
 y = x / 2
 y
 ```
-# Output: 0.5
+> Output: 1
 
 # You can place multiple statements in one line, separated by semicolon.
 ```python
 print(x); print(x+1); print(x+2)  # No ending semicolon
 ```
-# Output:
-# 1
-# 2
-# 3
+> Output:
+ 1
+ 2
+ 3
 
 # An expression in brackets [] (i.e., list) can span multiple lines
 ```python
@@ -49,7 +49,7 @@ x = [1,
      22,
      333]  # Re-assign a list denoted as [v1, v2, ...] to variable x
 x
-# Output: [1, 22, 333]
+> Output: [1, 22, 333]
 ```
 # An expression in braces {} (i.e., associative array) can also span multiple lines
 ```python
@@ -59,7 +59,7 @@ x = {'name':'Peter',
     }   # Re-assign a dictionary denoted as {k1:v1, k2:v2,...} to variable x
 x
 ```
-# Output: {'name': 'Peter', 'gender': 'male', 'age': 21}
+> Output: {'name': 'Peter', 'gender': 'male', 'age': 21}
 
 # An expression in parentheses () can also span multiple lines
 # You can break a long expression into several lines by enclosing it with parentheses ()
@@ -71,7 +71,7 @@ x =(1 +
     4)
 x
 ```
-# Output: 2
+> Output: 2
 
 # You can break a long string into several lines with parentheses () too
 ```python
@@ -80,4 +80,4 @@ s = ('testing '   # No commas
      'world!')
 s
 ```
-# Output: 'testing hello, world!'
+> Output: 'testing hello, world!'
