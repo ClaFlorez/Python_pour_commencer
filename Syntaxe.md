@@ -17,8 +17,8 @@ Une instruction Python est délimitée par un saut de ligne. Une instruction ne 
 
 ### Exemples :
 
-Une instruction Python sur une ligne, terminée par un saut de ligne.
-Il n'y a pas de point-virgule à la fin d'une instruction.
+## Une instruction Python sur une ligne, terminée par un saut de ligne.
+## Il n'y a pas de point-virgule à la fin d'une instruction.
 ```python
 x = 1     # Assigne 1 à la variable x
 print(x)   # Affiche la valeur de la variable x
@@ -34,7 +34,7 @@ y
 ```
 > Sortie : 1
 
-Vous pouvez placer plusieurs instructions sur une ligne, séparées par des points-virgules.
+## Vous pouvez placer plusieurs instructions sur une ligne, séparées par des points-virgules.
 ```python
 print(x); print(x+1); print(x+2)  # Pas de point-virgule à la fin
 ```
@@ -43,7 +43,7 @@ print(x); print(x+1); print(x+2)  # Pas de point-virgule à la fin
 > 2
 > 3
 
-Une expression entre crochets [] (c'est-à-dire une liste) peut s'étendre sur plusieurs lignes
+## Une expression entre crochets [] (c'est-à-dire une liste) peut s'étendre sur plusieurs lignes
 ```python
 x = [1,
      22,
@@ -52,7 +52,7 @@ x
 ```
 > Sortie : [1, 22, 333]
 
-Une expression entre accolades {} c'est-à-dire un tableau associatif - dictionnaire peut aussi s'étendre sur plusieurs lignes.
+## Une expression entre accolades {} c'est-à-dire un tableau associatif - dictionnaire peut aussi s'étendre sur plusieurs lignes.
 ```python
 x = {'name':'Peter',
 'gender':'male',
@@ -62,8 +62,8 @@ x
 ```
 > Sortie : {'name': 'Peter', 'gender': 'male', 'age': 21}
 
-Une expression entre parenthèses () peut aussi s'étendre sur plusieurs lignes
-Vous pouvez diviser une longue expression en plusieurs lignes en l'entourant de parenthèses ()
+## Une expression entre parenthèses () peut aussi s'étendre sur plusieurs lignes
+## Vous pouvez diviser une longue expression en plusieurs lignes en l'entourant de parenthèses ()
 ```python
 x =(1 +
     2
@@ -74,7 +74,7 @@ x
 ```
 > Sortie : 2
 
-Vous pouvez aussi diviser une longue chaîne en plusieurs lignes avec des parenthèses ()
+## Vous pouvez aussi diviser une longue chaîne en plusieurs lignes avec des parenthèses ()
 ```python
 s = ('testing '   # Pas de virgules
      'hello, '
