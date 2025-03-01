@@ -1,5 +1,9 @@
 # Introduction à Python
 
+<div style="text-align: center;">
+    <img src="logo-python.png" alt="logo-python" width="33%">
+</div>
+
 Python est un langage de programmation créé par le Néerlandais Guido van Rossum vers 1991. C'est un projet open-source, et son site officiel est [www.python.org](https://www.python.org).
 
 ## Caractéristiques principales de Python
@@ -34,7 +38,4 @@ Actuellement, Python 2 et Python 3 coexistent, mais ne sont pas compatibles entr
 
 La documentation officielle de Python, comprenant des tutoriels et des références du langage, est disponible sur [https://docs.python.org](https://docs.python.org). Cette documentation est une ressource précieuse pour apprendre et maîtriser le langage, offrant des guides détaillés et des exemples pour les programmeurs de tous niveaux.
 
-## Logo de Python
-
-![logo-python](images/logo-python.png)
 
