@@ -21,15 +21,15 @@ Python prend en charge les types numériques suivants :
 Les entiers en Python n'ont pas de limite de taille :
 
 > 123 + 456 - 789 
-# réponse -210
+réponse -210
 12345678901234567890 + 1
-# réponse 12345678901234567891
+réponse 12345678901234567891
 2 ** 888  # 2 élevé à 888
 ...
 len(str(2 ** 888))  # Longueur du nombre
-# réponse 268
+réponse 268
 type(123)
-<class 'int'>
+'int'
 
 
 Vous pouvez représenter des entiers en :
@@ -41,18 +41,17 @@ Vous pouvez représenter des entiers en :
 
 Les nombres flottants sont en **double précision (64 bits)** :
 
-```python
 > 1.23 * -4e5
 -492000.0
 > type(1.2)
-<class 'float'>
-> import math
-> math.pi
+'float'
+import math
+ math.pi
 3.141592653589793
-> import random
-> random.random()  # Nombre aléatoire entre [0, 1)
+ import random
+ random.random()  # Nombre aléatoire entre [0, 1)
 0.890839384187198
-```
+
 
 ### Booléens (`bool`)
 
