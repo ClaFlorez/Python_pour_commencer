@@ -1,217 +1,231 @@
-# Types de Données et Typage Dynamique
+# Types de Données et Typage Dynamique en Python
 
-Python possède de nombreux types de données intégrés, tels que :
+Python offre une variété de types de données intégrés, notamment :
+
 - **Numériques** (Entiers, Flottants, Booléens, Complexes)
-- **Chaînes de texte (String)**
+- **Chaînes de caractères (String)**
 - **Listes, Tuples, Ensembles et Dictionnaires**
 - **Fichiers**
 
-Des types plus avancés, comme **Decimal** et **Fraction**, se trouvent dans des modules externes et sont particulièrement utiles pour les calculs financiers.
-
-Vous pouvez utiliser la fonction intégrée `type(variable)` pour vérifier le type d'une variable ou d'une valeur littérale.
-
----
+Des types plus avancés, tels que **Decimal** et **Fraction**, sont disponibles dans des modules externes.
 
 ## 1. Types Numériques
 
-Python prend en charge les types numériques suivants :
-
 ### Entiers (`int`)
 
-Les entiers en Python n'ont pas de limite de taille :
+Les entiers n'ont pas de limite de taille :
 
-> 123 + 456 - 789 
-réponse -210
-12345678901234567890 + 1
-réponse 12345678901234567891
-2 ** 888  # 2 élevé à 888
-...
-len(str(2 ** 888))  # Longueur du nombre
-réponse 268
-type(123)
-'int'
+```
 
+123 + 456 - 789
 
-Vous pouvez représenter des entiers en :
-- **Hexadécimal** (`0x1abc` ou `0X1ABC`)
-- **Octal** (`0o1776` ou `0O1776`)
-- **Binaire** (`0b11000011` ou `0B11000011`)
+```
+Résultat : -210
+
+```
+
+2 ** 888
+
+```
+Résultat : Très grand nombre
 
 ### Flottants (`float`)
 
-Les nombres flottants sont en **double précision (64 bits)** :
+Les nombres flottants sont en double précision :
 
-> 1.23 * -4e5
--492000.0
-> type(1.2)
-'float'
-import math
- math.pi
-3.141592653589793
- import random
- random.random()  # Nombre aléatoire entre [0, 1)
-0.890839384187198
+```
 
+1.23 * -4e5
+
+```
+Résultat : -492000.0
+
+```
+
+type(1.2)
+
+```
+Résultat : float
 
 ### Booléens (`bool`)
 
-Les booléens peuvent seulement être `True` ou `False` :
+Les booléens sont `True` ou `False` :
 
-```python
-> 8 == 8
-True
-> 8 == 9
-False
-> type(True)
-<class 'bool'>
-> bool(0)  # 0, None et valeurs vides sont False
-False
-> bool('hello')  # Toute valeur non vide est True
-True
 ```
+
+8 == 8
+
+```
+Résultat : True
+
+```
+
+bool(0)
+
+```
+Résultat : False
 
 ### Complexes (`complex`)
 
 Les nombres complexes ont une partie réelle et imaginaire :
 
-```python
-> x = 1 + 2j
-> x.real, x.imag
-(1.0, 2.0)
-> type(x)
-<class 'complex'>
-> x * (3 + 4j)
-(-5+10j)
 ```
+
+x = 1 + 2j
+x.real, x.imag
+
+```
+Résultat : (1.0, 2.0)
 
 ### Decimal et Fraction
 
-Les flottants peuvent être imprécis :
-
-```python
-> 0.1 * 3
-0.30000000000000004
-```
-
 Pour plus de précision, utilisez `decimal.Decimal` :
 
-```python
-> import decimal
-> x = decimal.Decimal('0.1')
-> x * 3
-Decimal('0.3')
-> type(x)
-<class 'decimal.Decimal'>
 ```
 
----
+import decimal
+x = decimal.Decimal('0.1')
+x * 3
+
+```
+Résultat : 0.3
 
 ## 2. Typage Dynamique et Affectation de Variables
 
-Python est **dynamiquement typé** (contrairement à C/C++/Java). Les variables peuvent changer de type :
+Python est dynamiquement typé. Les variables peuvent changer de type :
 
-```python
-> x = 1
-> type(x)
-<class 'int'>
-> x = 1.0
-> type(x)
-<class 'float'>
-> x = 'hello'
-> type(x)
-<class 'str'>
 ```
 
-Vous pouvez vérifier le type avec `isinstance()` :
+x = 1
+type(x)
 
-```python
-> isinstance(123, int)
-True
-> isinstance('a', str)
-True
-> isinstance('a', int)
-False
+```
+Résultat : int
+
 ```
 
-### Conversion de Types (`int()`, `float()`, `str()`, `bool()`)
+x = 'bonjour'
+type(x)
 
-```python
-> x = '123'  # Chaîne
-> x = int(x)  # Convertir en int
-> x = float(x)  # Convertir en float
-> x = str(x)  # Convertir en chaîne
-> x = bool(x)  # Convertir en booléen
-> x
-True  # Toute chaîne non vide est True
+```
+Résultat : str
+
+### Conversion de Types
+
 ```
 
----
+x = '123'
+x = int(x)
 
-## 3. Opérateurs d'affectation composés
+```
+Résultat : 123
 
-Python prend en charge des opérateurs d'affectation abrégés comme `+=`, `-=`, `*=`, `/=`, `//=`, `**=`, et `%=`. Par exemple :
+## 3. Opérateurs d'Affectation Composés
 
-```python
-> i = 5
-> i += 1  # Équivaut à i = i + 1
-> i
-6
+Python supporte des opérateurs comme `+=` :
+
 ```
 
-## Incrémentation/Décrémentation
+i = 5
+i += 1
 
-Python ne prend pas en charge `++` et `--` comme en C/C++/Java. Vous devez utiliser `i = i + 1` ou `i += 1` pour incrémenter.
+```
+Résultat : 6
 
----
+## Opérateurs Relationnels
 
-## Opérateurs relationnels (comparaison)
+Python utilise `==`, `!=`, `<`, `>`, etc. :
 
-Python prend en charge `==`, `!=`, `<`, `<=`, `>`, `>=`, `in`, `not in`, `is`, et `is not`. Ces opérateurs renvoient `True` ou `False`.
-
-Exemple :
-
-```python
-> x = 5
-> x == 5
-True
-> x is 5
-True
-> x in [1, 2, 3, 5]
-True
 ```
 
----
+x = 5
+x == 5
 
-## Opérateurs logiques
+```
+Résultat : True
 
-Python utilise `and`, `or` et `not` pour les opérations logiques.
+## Opérateurs Logiques
 
-Exemple :
+Python utilise `and`, `or`, `not` :
 
-```python
-> True and False
-False
-> True or False
-True
-> not True
-False
+```
+
+True and False
+
+```
+Résultat : False
+
+## Opérateurs au Niveau du Bit
+
+Python supporte `&`, `|`, `~`, `^`, etc. :
+
+```
+
+x = 0b1001
+y = 0b1100
+x \& y
+
+```
+Résultat : 0b1000
 ```
 
 ---
 
-## Opérateurs au niveau du bit (avancé)
+# 3. Opérateurs en Python
 
-Python prend en charge `&`, `|`, `~`, `^`, `<<`, et `>>` pour les opérations au niveau du bit.
+## Opérateurs d'Attribution Composée
 
-Exemple :
+| Opérateur | Équivalent à  |
+| --------- | ------------- |
+| `+=`      | `x = x + y`   |
+| `-=`      | `x = x - y`   |
+| `*=`      | `x = x * y`   |
+| `/=`      | `x = x / y`   |
+| `//=`     | `x = x // y`  |
+| `**=`     | `x = x ** y`  |
+| `%=`      | `x = x % y`   |
 
-```python
-> x = 0b1001
-> y = 0b1100
-> x & y
-0b1000
-> x | y
-0b1101
-> x ^ y
-0b0101
-```
+## Opérateurs Relationnels (Comparaison)
+
+| Opérateur | Description                |
+| --------- | -------------------------- |
+| `==`      | Égalité                    |
+| `!=`      | Différent                  |
+| `<`       | Moins que                  |
+| `<=`      | Moins ou égal à            |
+| `>`       | Plus que                   |
+| `>=`      | Plus ou égal à             |
+| `in`      | Contenu dans une séquence  |
+| `not in`  | Non contenu dans une séquence |
+| `is`      | Référence au même objet    |
+| `is not`  | Ne référence pas le même objet |
+
+## Opérateurs Logiques
+
+| Opérateur | Description     |
+| --------- | --------------- |
+| `and`     | ET logique      |
+| `or`      | OU logique      |
+| `not`     | Négation logique |
+
+## Opérateurs Bit à Bit
+
+| Opérateur | Description                     |
+| --------- | ------------------------------- |
+| `&`       | ET bit à bit                    |
+| \`        | \`                              | OU bit à bit |
+| `^`       | XOR bit à bit                   |
+| `~`       | NON bit à bit                   |
+| `<<`      | Décalage vers la gauche         |
+| `>>`      | Décalage vers la droite         |
+
+## Fonctions Intégrées Utiles
+
+| Fonction       | Description                           |
+| -------------- | ------------------------------------- |
+| `round(x, n)`  | Arrondit `x` à `n` décimales          |
+| `pow(x, y)`    | Élève `x` à la puissance `y`          |
+| `abs(x)`       | Valeur absolue de `x`                 |
+| `hex(x)`       | Représentation hexadécimale de `x`    |
+| `bin(x)`       | Représentation binaire de `x`         |
+| `oct(x)`       | Représentation octale de `x`          |
