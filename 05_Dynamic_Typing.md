@@ -1,223 +1,219 @@
-# Data Types and Dynamic Typing
+# Types de Données et Typage Dynamique
 
-Python tiene muchos tipos de datos incorporados, como:
-- **Nombres** (Enteros, Flotantes, Booleanos, Complejos)
-- **Cadenas de texto (String)**
-- **Listas, Tuplas, Conjuntos y Diccionarios**
-- **Archivos**
+Python possède de nombreux types de données intégrés, tels que :
+- **Numériques** (Entiers, Flottants, Booléens, Complexes)
+- **Chaînes de texte (String)**
+- **Listes, Tuples, Ensembles et Dictionnaires**
+- **Fichiers**
 
-Tipos más avanzados, como **Decimal** y **Fraction**, se encuentran en módulos externos.
+Des types plus avancés, comme **Decimal** et **Fraction**, se trouvent dans des modules externes et sont particulièrement utiles pour les calculs financiers.
 
-Puedes usar la función incorporada `type(variable)` para verificar el tipo de una variable o un valor literal.
+Vous pouvez utiliser la fonction intégrée `type(variable)` pour vérifier le type d'une variable ou d'une valeur littérale.
 
 ---
 
-## 1. Number Types
+## 1. Types Numériques
 
-Python admite los siguientes tipos numéricos:
+Python prend en charge les types numériques suivants :
 
-### Enteros (`int`)
+### Entiers (`int`)
 
-Los enteros en Python no tienen un límite de tamaño:
+Les entiers en Python n'ont pas de limite de taille :
 
 ```python
->>> 123 + 456 - 789
+> 123 + 456 - 789
 -210
->>> 12345678901234567890 + 1
+> 12345678901234567890 + 1
 12345678901234567891
->>> 2 ** 888  # 2 elevado a 888
+> 2 ** 888  # 2 élevé à 888
 ...
->>> len(str(2 ** 888))  # Longitud del número
+> len(str(2 ** 888))  # Longueur du nombre
 268
->>> type(123)
+> type(123)
 <class 'int'>
 ```
 
-Puedes representar enteros en:
-- **Hexadecimal** (`0x1abc` o `0X1ABC`)
-- **Octal** (`0o1776` o `0O1776`)
-- **Binario** (`0b11000011` o `0B11000011`)
+Vous pouvez représenter des entiers en :
+- **Hexadécimal** (`0x1abc` ou `0X1ABC`)
+- **Octal** (`0o1776` ou `0O1776`)
+- **Binaire** (`0b11000011` ou `0B11000011`)
 
-### Flotantes (`float`)
+### Flottants (`float`)
 
-Los números de punto flotante son de **doble precisión (64 bits)**:
+Les nombres flottants sont en **double précision (64 bits)** :
 
 ```python
->>> 1.23 * -4e5
+> 1.23 * -4e5
 -492000.0
->>> type(1.2)
+> type(1.2)
 <class 'float'>
->>> import math
->>> math.pi
+> import math
+> math.pi
 3.141592653589793
->>> import random
->>> random.random()  # Número aleatorio entre [0, 1)
+> import random
+> random.random()  # Nombre aléatoire entre [0, 1)
 0.890839384187198
 ```
 
-### Booleanos (`bool`)
+### Booléens (`bool`)
 
-Los booleanos solo pueden ser `True` o `False`:
+Les booléens peuvent seulement être `True` ou `False` :
 
 ```python
->>> 8 == 8
+> 8 == 8
 True
->>> 8 == 9
+> 8 == 9
 False
->>> type(True)
+> type(True)
 <class 'bool'>
->>> bool(0)  # 0, None y valores vacíos son False
+> bool(0)  # 0, None et valeurs vides sont False
 False
->>> bool('hello')  # Cualquier valor no vacío es True
+> bool('hello')  # Toute valeur non vide est True
 True
 ```
 
-### Complejos (`complex`)
+### Complexes (`complex`)
 
-Los números complejos tienen una parte real e imaginaria:
+Les nombres complexes ont une partie réelle et imaginaire :
 
 ```python
->>> x = 1 + 2j
->>> x.real, x.imag
+> x = 1 + 2j
+> x.real, x.imag
 (1.0, 2.0)
->>> type(x)
+> type(x)
 <class 'complex'>
->>> x * (3 + 4j)
+> x * (3 + 4j)
 (-5+10j)
 ```
 
-### Decimal y Fraction
+### Decimal et Fraction
 
-Los flotantes pueden ser imprecisos:
+Les flottants peuvent être imprécis :
 
 ```python
->>> 0.1 * 3
+> 0.1 * 3
 0.30000000000000004
 ```
 
-Para mayor precisión, usa `decimal.Decimal`:
+Pour plus de précision, utilisez `decimal.Decimal` :
 
 ```python
->>> import decimal
->>> x = decimal.Decimal('0.1')
->>> x * 3
+> import decimal
+> x = decimal.Decimal('0.1')
+> x * 3
 Decimal('0.3')
->>> type(x)
+> type(x)
 <class 'decimal.Decimal'>
 ```
 
 ---
 
-## 2. Dynamic Typing y Asignación de Variables
+## 2. Typage Dynamique et Affectation de Variables
 
-Python es **dinámicamente tipado** (a diferencia de C/C++/Java). Las variables pueden cambiar de tipo:
+Python est **dynamiquement typé** (contrairement à C/C++/Java). Les variables peuvent changer de type :
 
 ```python
->>> x = 1
->>> type(x)
+> x = 1
+> type(x)
 <class 'int'>
->>> x = 1.0
->>> type(x)
+> x = 1.0
+> type(x)
 <class 'float'>
->>> x = 'hello'
->>> type(x)
+> x = 'hello'
+> type(x)
 <class 'str'>
 ```
 
-Puedes verificar el tipo con `isinstance()`:
+Vous pouvez vérifier le type avec `isinstance()` :
 
 ```python
->>> isinstance(123, int)
+> isinstance(123, int)
 True
->>> isinstance('a', str)
+> isinstance('a', str)
 True
->>> isinstance('a', int)
+> isinstance('a', int)
 False
 ```
 
-### Conversión de Tipos (`int()`, `float()`, `str()`, `bool()`)
+### Conversion de Types (`int()`, `float()`, `str()`, `bool()`)
 
 ```python
->>> x = '123'  # String
->>> x = int(x)  # Convertir a int
->>> x = float(x)  # Convertir a float
->>> x = str(x)  # Convertir a string
->>> x = bool(x)  # Convertir a booleano
->>> x
-True  # Cualquier string no vacío es True
+> x = '123'  # Chaîne
+> x = int(x)  # Convertir en int
+> x = float(x)  # Convertir en float
+> x = str(x)  # Convertir en chaîne
+> x = bool(x)  # Convertir en booléen
+> x
+True  # Toute chaîne non vide est True
 ```
 
 ---
 
-## 3. Operador de Asignación (`=`)
+## 3. Opérateurs d'affectation composés
 
-No necesitas declarar variables antes de usarlas:
-
-```python
->>> x = 8
->>> x = 'Hello'
->>> y  # Error, variable no definida
-NameError: name 'y' is not defined
-```
-
-### Asignación Múltiple
+Python prend en charge des opérateurs d'affectation abrégés comme `+=`, `-=`, `*=`, `/=`, `//=`, `**=`, et `%=`. Par exemple :
 
 ```python
->>> b, c, d = 123, 4.5, 'Hello'
->>> e = f = g = 123  # Asignación en cadena
+> i = 5
+> i += 1  # Équivaut à i = i + 1
+> i
+6
 ```
 
-### `del` para eliminar variables
+## Incrémentation/Décrémentation
+
+Python ne prend pas en charge `++` et `--` comme en C/C++/Java. Vous devez utiliser `i = i + 1` ou `i += 1` pour incrémenter.
+
+---
+
+## Opérateurs relationnels (comparaison)
+
+Python prend en charge `==`, `!=`, `<`, `<=`, `>`, `>=`, `in`, `not in`, `is`, et `is not`. Ces opérateurs renvoient `True` ou `False`.
+
+Exemple :
 
 ```python
->>> x = 8
->>> del x
->>> x
-NameError: name 'x' is not defined
+> x = 5
+> x == 5
+True
+> x is 5
+True
+> x in [1, 2, 3, 5]
+True
 ```
 
 ---
 
-## Tableau des Types de Données en Python
+## Opérateurs logiques
 
-| Type de Donnée | Description | Exemple |
-|---------------|------------|---------|
-| **int** (Entier) | Nombres entiers sans limite de taille | `123`, `-456`, `0x1A` (hex) |
-| **float** (Flottant) | Nombres avec décimales ou notation scientifique | `3.14`, `-2.7`, `1.2e3` |
-| **bool** (Booléen) | Valeurs `True` ou `False` | `True`, `False`, `8 == 8` |
-| **complex** (Complexe) | Nombres avec une partie réelle et imaginaire | `1+2j`, `-3-4j` |
-| **str** (Chaîne) | Séquence de caractères | `"Bonjour"`, `'Python'` |
-| **list** (Liste) | Collection modifiable et ordonnée | `[1, 2, 3]`, `['a', 'b', 'c']` |
-| **tuple** (Tuple) | Collection immuable et ordonnée | `(1, 2, 3)`, `('x', 'y', 'z')` |
-| **set** (Ensemble) | Collection mutable sans doublons | `{1, 2, 3}`, `{'a', 'b'}` |
-| **dict** (Dictionnaire) | Collection clé-valeur | `{'nom': 'Ana', 'âge': 25}` |
-| **NoneType** | Représente l'absence de valeur | `None` |
+Python utilise `and`, `or` et `not` pour les opérations logiques.
 
----
+Exemple :
 
-### Résumé
-
-- Python prend en charge le **typage dynamique**, les variables peuvent changer de type.
-- Les nombres incluent `int`, `float`, `bool`, `complex`, `Decimal` et `Fraction`.
-- Les types peuvent être convertis avec `int()`, `float()`, `str()`, `bool()`, etc.
-- Vous pouvez attribuer plusieurs valeurs sur une seule ligne avec `b, c, d = 1, 2, 3`.
-- `del` supprime les variables de la mémoire.
+```python
+> True and False
+False
+> True or False
+True
+> not True
+False
+```
 
 ---
-# Operadores Aritméticos en Python
 
-Python admite los siguientes operadores aritméticos:
+## Opérateurs au niveau du bit (avancé)
 
-| Operador | Modo   | Uso      | Descripción                      | Ejemplo                        |
-|----------|--------|----------|----------------------------------|--------------------------------|
-| `+`      | Binario, Unario | `x + y`, `+x`  | Suma, Positivo                 | `2 + 3` → `5`                 |
-| `-`      | Binario, Unario | `x - y`, `-x`  | Resta, Negativo                 | `5 - 2` → `3`, `-5` → `-5`    |
-| `*`      | Binario | `x * y`  | Multiplicación                   | `2 * 3` → `6`                 |
-| `/`      | Binario | `x / y`  | División flotante (retorna `float`) | `5 / 2` → `2.5`              |
-| `//`     | Binario | `x // y` | División entera (retorna el piso) | `5 // 2` → `2`, `-5 // 2` → `-3` |
-| `**`     | Binario | `x ** y` | Exponenciación                   | `2 ** 3` → `8`                |
-| `%`      | Binario | `x % y`  | Módulo (resto de la división)    | `5 % 2` → `1`                 |
+Python prend en charge `&`, `|`, `~`, `^`, `<<`, et `>>` pour les opérations au niveau du bit.
 
-> ⚠️ **Nota:** En Java, `-1/2` retorna `0`, mientras que en Python `-1 // 2` retorna `-1` debido al redondeo hacia abajo.
+Exemple :
 
----
+```python
+> x = 0b1001
+> y = 0b1100
+> x & y
+0b1000
+> x | y
+0b1101
+> x ^ y
+0b0101
+```
