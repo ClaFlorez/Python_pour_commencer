@@ -20,18 +20,17 @@ Python prend en charge les types numériques suivants :
 
 Les entiers en Python n'ont pas de limite de taille :
 
-```python
-> 123 + 456 - 789
--210
-> 12345678901234567890 + 1
-12345678901234567891
-> 2 ** 888  # 2 élevé à 888
+> 123 + 456 - 789 
+# réponse -210
+12345678901234567890 + 1
+# réponse 12345678901234567891
+2 ** 888  # 2 élevé à 888
 ...
-> len(str(2 ** 888))  # Longueur du nombre
-268
-> type(123)
+len(str(2 ** 888))  # Longueur du nombre
+# réponse 268
+type(123)
 <class 'int'>
-```
+
 
 Vous pouvez représenter des entiers en :
 - **Hexadécimal** (`0x1abc` ou `0X1ABC`)
