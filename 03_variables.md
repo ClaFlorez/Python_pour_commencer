@@ -4,6 +4,9 @@ Comme dans tous les langages de programmation, une variable est un emplacement d
 
 Comme la plupart des langages de script interprétés (comme JavaScript ou Perl), Python est **dynamiquement typé**. Il n'est **pas nécessaire** de déclarer une variable avant de l'utiliser. Une variable est créée lors de son affectation initiale. (Contrairement aux langages à typage statique comme C, C++, Java ou C#, où vous devez d'abord déclarer le nom et le type de la variable avant de l'utiliser.)
 
+## Qu'est-ce que le REPL ?
+
+Les instructions avec >>> cmd ou powershell. Le **REPL (Read-Eval-Print Loop)** est un environnement interactif qui permet d'exécuter des commandes Python en temps réel. Il est très utile pour tester du code rapidement sans avoir besoin de créer un fichier `.py`.
 Par exemple :
 
 ```python
