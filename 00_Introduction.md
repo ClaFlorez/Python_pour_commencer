@@ -23,7 +23,7 @@ Python est un langage de programmation créé par le Néerlandais Guido van Ross
 Python a évolué au fil des ans, avec trois versions principales :
 
 1. **Python 1** : La version initiale.
-2. **Python 2** : Lancée en 2000, elle a introduit le ramasse-miettes et le support de l'Unicode.
+2. **Python 2** : Lancée en 2000, elle a introduit le gestor de memoria automático et le support de l'Unicode.
 3. **Python 3** (Python 3000 ou py3k) : Lancée en 2008, c'est une mise à jour majeure non compatible avec Python 2.
 
 ## Python 2 vs Python 3
