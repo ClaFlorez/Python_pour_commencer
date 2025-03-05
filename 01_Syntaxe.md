@@ -32,11 +32,13 @@ x + 1
 y = x / 2
 y
 ```
-> Sortie : 1
+> Sortie : 0.5 Il est facile de se tromper en pensant que x + 1 incrémente x,
+               mais ce n'est pas le cas. On peut l'utiliser pour afficher x + 1 dans un print(),
+               par exemple. C'est une erreur de logique fréquente.
 
 ## Vous pouvez placer plusieurs instructions sur une ligne, séparées par des points-virgules.
 ```python
-print(x); print(x+1); print(x+2)  # Pas de point-virgule à la fin
+>>>print(x); print(x+1); print(x+2)  # Pas de point-virgule à la fin
 ```
 > Sortie :
 > 1
