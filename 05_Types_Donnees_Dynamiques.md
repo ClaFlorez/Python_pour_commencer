@@ -90,142 +90,196 @@ x * 3
 ```
 Résultat : 0.3
 
-## 2. Typage Dynamique et Affectation de Variables
+# Typage Dynamique et Opérateur d'Attribution
 
-Python est dynamiquement typé. Les variables peuvent changer de type :
+Python est un langage à typage dynamique (contrairement à C, C++ ou Java, qui sont à typage statique). En Python, le type est associé à l'objet, et non à la variable. Autrement dit, une variable n'a pas de type fixe et peut référencer des objets de différents types.
 
-```
+## Caractéristiques Clés
+- Il n'est pas nécessaire de déclarer une variable avant de l'utiliser.
+- Elle est créée automatiquement lorsqu'une valeur lui est attribuée.
+- Le type d'une variable peut changer en lui réassignant une nouvelle valeur.
+- On peut obtenir le type d'un objet référencé par une variable avec `type(var_name)`.
 
-x = 1
-type(x)
+### Exemple :
+```python
+x = 1         # Assigner un entier
+print(x)      # Afficher x
+# Sortie : 1
+print(type(x)) # Obtenir le type
+# Sortie : <class 'int'>
 
-```
-Résultat : int
+x = 1.0       # Réassigner un flottant
+print(type(x))
+# Sortie : <class 'float'>
 
-```
-
-x = 'bonjour'
-type(x)
-
-```
-Résultat : str
-
-### Conversion de Types
-
-```
-
-x = '123'
-x = int(x)
-
-```
-Résultat : 123
-
-## 3. Opérateurs d'Affectation Composés
-
-Python supporte des opérateurs comme `+=` :
-
-```
-
-i = 5
-i += 1
-
-```
-Résultat : 6
-
-## Opérateurs Relationnels
-
-Python utilise `==`, `!=`, `<`, `>`, etc. :
-
-```
-
-x = 5
-x == 5
-
-```
-Résultat : True
-
-## Opérateurs Logiques
-
-Python utilise `and`, `or`, `not` :
-
-```
-
-True and False
-
-```
-Résultat : False
-
-## Opérateurs au Niveau du Bit
-
-Python supporte `&`, `|`, `~`, `^`, etc. :
-
-```
-
-x = 0b1001
-y = 0b1100
-x \& y
-
-```
-Résultat : 0b1000
+x = 'hello'   # Réassigner une chaîne de caractères
+print(type(x))
+# Sortie : <class 'str'>
 ```
 
 ---
 
-# 3. Opérateurs en Python
+## Conversion de Types (`int(x)`, `float(x)`, `str(x)`)
+Python permet la conversion explicite des types via des fonctions intégrées comme `int(x)`, `float(x)`, `str(x)`, `bool(x)`, etc.
+
+### Exemple :
+```python
+x = '123'     # Chaîne de caractères
+print(type(x))
+# Sortie : <class 'str'>
+
+x = int(x)    # Convertir en entier
+print(type(x))
+# Sortie : <class 'int'>
+
+x = float(x)  # Convertir en flottant
+print(type(x))
+# Sortie : <class 'float'>
+
+x = str(x)    # Reconvertir en chaîne de caractères
+print(type(x))
+# Sortie : <class 'str'>
+
+x = bool(x)   # Convertir en booléen
+print(x)
+# Sortie : True
+```
+
+---
+
+## Vérifier le Type d'une Variable : `isinstance(instance, type)`
+La fonction `isinstance()` permet de vérifier si un objet appartient à un type spécifique.
+
+### Exemple :
+```python
+print(isinstance(123, int)) # True
+print(isinstance('a', int)) # False
+print(isinstance('a', str)) # True
+```
+
+---
+
+## Opérateur d'Attribution (`=`)
+Python permet d'attribuer des valeurs sans déclarer les variables au préalable.
+
+```python
+x = 8        # Créer une variable
+x = 'Hello'  # Réassigner un autre type
+
+print(y)     # Erreur : variable non définie
+# NameError: name 'y' is not defined
+```
+
+### Attribution Chaînée et par Paires
+```python
+a = 1  # Attribution classique
+b, c, d = 123, 4.5, 'Hello'  # Attribution par paires
+
+print(b, c, d)
+# Sortie : 123 4.5 Hello
+
+e = f = g = 123  # Attribution en chaîne
+print(e, f, g)
+# Sortie : 123 123 123
+```
+
+---
+
+## Opérateur `del`
+On peut supprimer une variable avec `del`.
+
+```python
+x = 8
+print(x)  # 8
+
+del x
+print(x)  # NameError: name 'x' is not defined
+```
+
+---
+
+## Opérations Numériques
+Python prend en charge les opérateurs arithmétiques suivants :
+
+| Opérateur | Description          | Exemple        |
+|----------|----------------------|---------------|
+| `+`      | Addition             | `x + y`       |
+| `-`      | Soustraction         | `x - y`       |
+| `*`      | Multiplication       | `x * y`       |
+| `/`      | Division flottante    | `1 / 2  # 0.5` |
+| `//`     | Division entière      | `1 // 2  # 0` |
+| `**`     | Exponentiation        | `2 ** 3  # 8` |
+| `%`      | Modulo (reste)        | `9 % 2  # 1`  |
+
+### Exemple :
+```python
+print(9 % 2)   # 1
+print(-9 % 2)  # 1
+print(8.9 // 2.5)  # 3.0
+```
+
+**Remarque :** Python utilise la division par plancher (`//`) pour les entiers, contrairement à Java qui tronque vers zéro.
+
+---
 
 ## Opérateurs d'Attribution Composée
+Python prend en charge des opérateurs comme `+=`, `-=`, `*=`, `/=`, `//=`, `**=`, `%=`.
 
-| Opérateur | Équivalent à  |
-| --------- | ------------- |
-| `+=`      | `x = x + y`   |
-| `-=`      | `x = x - y`   |
-| `*=`      | `x = x * y`   |
-| `/=`      | `x = x / y`   |
-| `//=`     | `x = x // y`  |
-| `**=`     | `x = x ** y`  |
-| `%=`      | `x = x % y`   |
+```python
+i = 5
+i += 1  # Équivalent à i = i + 1
+print(i)  # 6
+```
+
+**Remarque :** Python **NE** possède pas `++` ni `--` comme en C/C++/Java.
+
+---
+
+## Opérations avec Types Mixtes
+Si une opération est effectuée entre des types différents, le type "inférieur" est converti en type "supérieur" avant l'opération.
+
+Ordre des types : `int < float < complex`
+```python
+print(1 + 2.3)  # 3.3 (int + float => float)
+```
+
+---
 
 ## Opérateurs Relationnels (Comparaison)
+Ces opérateurs retournent un booléen (`True` ou `False`).
 
-| Opérateur | Description                |
-| --------- | -------------------------- |
-| `==`      | Égalité                    |
-| `!=`      | Différent                  |
-| `<`       | Moins que                  |
-| `<=`      | Moins ou égal à            |
-| `>`       | Plus que                   |
-| `>=`      | Plus ou égal à             |
-| `in`      | Contenu dans une séquence  |
-| `not in`  | Non contenu dans une séquence |
-| `is`      | Référence au même objet    |
-| `is not`  | Ne référence pas le même objet |
+| Opérateur | Description |
+|----------|------------|
+| `==`     | Égalité   |
+| `!=`     | Différent |
+| `<`      | Inférieur |
+| `<=`     | Inférieur ou égal |
+| `>`      | Supérieur |
+| `>=`     | Supérieur ou égal |
+| `in`     | Contenu dans une séquence |
+| `is`     | Même objet en mémoire |
 
-## Opérateurs Logiques
+```python
+x = [1, 2, 3]
+print(2 in x)  # True
+print(4 in x)  # False
+```
 
-| Opérateur | Description     |
-| --------- | --------------- |
-| `and`     | ET logique      |
-| `or`      | OU logique      |
-| `not`     | Négation logique |
+---
 
-## Opérateurs Bit à Bit
+## Opérateurs Logiques (`and`, `or`, `not`)
 
-| Opérateur | Description                     |
-| --------- | ------------------------------- |
-| `&`       | ET bit à bit                    |
-| \`        | \`                              | OU bit à bit |
-| `^`       | XOR bit à bit                   |
-| `~`       | NON bit à bit                   |
-| `<<`      | Décalage vers la gauche         |
-| `>>`      | Décalage vers la droite         |
+| Opérateur | Description      | Exemple |
+|----------|-----------------|---------|
+| `and`    | ET logique      | `x and y` |
+| `or`     | OU logique       | `x or y`  |
+| `not`    | NON logique | `not x`  |
 
-## Fonctions Intégrées Utiles
+```python
+print(True and False)  # False
+print(True or False)   # True
+print(not True)        # False
+```
 
-| Fonction       | Description                           |
-| -------------- | ------------------------------------- |
-| `round(x, n)`  | Arrondit `x` à `n` décimales          |
-| `pow(x, y)`    | Élève `x` à la puissance `y`          |
-| `abs(x)`       | Valeur absolue de `x`                 |
-| `hex(x)`       | Représentation hexadécimale de `x`    |
-| `bin(x)`       | Représentation binaire de `x`         |
-| `oct(x)`       | Représentation octale de `x`          |
+---
+
