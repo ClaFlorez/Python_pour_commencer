@@ -188,3 +188,98 @@ dire_bonjour = lambda: print("Bonjour !")
 dire_bonjour_prenom = lambda prenom: print(f"Bonjour {prenom} !")
 somme = lambda a, b: a + b
 ```
+# Plus Exercices sur les fonctions `lambda`
+
+### 1. Écrire une fonction `lambda` qui prend un nombre et retourne son double.
+```python
+double = lambda x: x * 2
+```
+
+### 2. Écrire une fonction `lambda` qui prend deux nombres et retourne leur somme.
+```python
+somme = lambda x, y: x + y
+```
+
+### 3. Écrire une fonction `lambda` qui prend une chaîne et retourne sa longueur.
+```python
+longueur = lambda s: len(s)
+```
+
+### 4. Écrire une fonction `lambda` qui prend un mot et retourne son inverse.
+```python
+inverse = lambda mot: mot[::-1]
+```
+
+### 5. Écrire une fonction `lambda` qui vérifie si un nombre est pair.
+```python
+est_pair = lambda x: x % 2 == 0
+```
+
+### 6. Utiliser `map()` avec `lambda` pour doubler chaque élément d'une liste `[1, 2, 3, 4]`.
+```python
+liste = [1, 2, 3, 4]
+double_liste = list(map(lambda x: x * 2, liste))
+```
+
+### 7. Utiliser `filter()` avec `lambda` pour filtrer les nombres pairs d'une liste `[1, 2, 3, 4, 5, 6]`.
+```python
+liste = [1, 2, 3, 4, 5, 6]
+nombres_pairs = list(filter(lambda x: x % 2 == 0, liste))
+```
+
+### 8. Utiliser `sorted()` avec `lambda` pour trier une liste de tuples `[(2, "b"), (1, "a"), (3, "c")]` par le premier élément.
+```python
+tuples = [(2, "b"), (1, "a"), (3, "c")]
+tuples_tries = sorted(tuples, key=lambda x: x[0])
+```
+
+### 9. Utiliser `reduce()` avec `lambda` pour calculer le produit des éléments d'une liste `[1, 2, 3, 4]`.
+```python
+from functools import reduce
+liste = [1, 2, 3, 4]
+produit = reduce(lambda x, y: x * y, liste)
+```
+
+### 10. Écrire une fonction `lambda` qui retourne `True` si un mot commence par une voyelle, sinon `False`.
+```python
+voyelles = "aeiouyAEIOUY"
+commence_par_voyelle = lambda mot: mot[0] in voyelles if mot else False
+```
+
+# Plus Exercices sur les fonctions classiques (`def`)
+
+### 1. Réécrire les fonctions ci-dessus en utilisant la syntaxe `def`.
+
+```python
+def double(x):
+    return x * 2
+
+def somme(x, y):
+    return x + y
+
+def longueur(s):
+    return len(s)
+
+def inverse(mot):
+    return mot[::-1]
+
+def est_pair(x):
+    return x % 2 == 0
+
+def double_liste(liste):
+    return list(map(lambda x: x * 2, liste))
+
+def nombres_pairs(liste):
+    return list(filter(lambda x: x % 2 == 0, liste))
+
+def tuples_tries(tuples):
+    return sorted(tuples, key=lambda x: x[0])
+
+def produit(liste):
+    from functools import reduce
+    return reduce(lambda x, y: x * y, liste)
+
+def commence_par_voyelle(mot):
+    voyelles = "aeiouyAEIOUY"
+    return mot[0] in voyelles if mot else False
+```
