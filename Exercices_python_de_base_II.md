@@ -162,4 +162,29 @@ for i in range(1, 6):
     print("*" * i)
 ```
 
-(Et ainsi de suite pour les autres exercices...)
+# Exercices sur les fonctions classiques (`def`)
+
+### 1. Créer une fonction qui affiche "Bonjour !".
+```python
+def dire_bonjour():
+    print("Bonjour !")
+```
+
+### 2. Créer une fonction qui prend un prénom en paramètre et affiche "Bonjour [prénom] !".
+```python
+def dire_bonjour_prenom(prenom):
+    print(f"Bonjour {prenom} !")
+```
+
+### 3. Créer une fonction qui prend deux nombres et retourne leur somme.
+```python
+def somme(a, b):
+    return a + b
+```
+
+### 4. Réécrire ces fonctions en utilisant la syntaxe `lambda`.
+```python
+dire_bonjour = lambda: print("Bonjour !")
+dire_bonjour_prenom = lambda prenom: print(f"Bonjour {prenom} !")
+somme = lambda a, b: a + b
+```
