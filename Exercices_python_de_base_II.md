@@ -34,6 +34,121 @@ while n <= 100:
     n += 1
 print("Somme de 1 à 100 :", somme)
 ```
+# Fonctions en Python : def et lambda
+
+## 1. Introduction
+En Python, nous utilisons les fonctions pour regrouper du code réutilisable. Deux manières courantes de définir des fonctions sont :
+- `def` : une déclaration classique de fonction.
+- `lambda` : une fonction anonyme pour des opérations simples en une seule ligne.
+
+## 2. Exemples pratiques
+
+### 2.1 Afficher "Bonjour !"
+```python
+# Avec def
+def saluer():
+    return "Bonjour !"
+
+# Avec lambda
+saluer_lambda = lambda: "Bonjour !"
+```
+
+### 2.2 Dire bonjour à une personne
+```python
+# Avec def
+def dire_bonjour(prenom):
+    return f"Bonjour {prenom} !"
+
+# Avec lambda
+dire_bonjour_lambda = lambda prenom: f"Bonjour {prenom} !"
+```
+
+### 2.3 Somme de deux nombres
+```python
+# Avec def
+def somme(a, b):
+    return a + b
+
+# Avec lambda
+somme_lambda = lambda a, b: a + b
+```
+
+### 2.4 Vérifier si un nombre est pair ou impair
+```python
+# Avec def
+def est_pair(n):
+    return "Pair" if n % 2 == 0 else "Impair"
+
+# Avec lambda
+est_pair_lambda = lambda n: "Pair" if n % 2 == 0 else "Impair"
+```
+
+### 2.5 Calculer le carré d'un nombre
+```python
+# Avec def
+def carre(n):
+    return n ** 2
+
+# Avec lambda
+carre_lambda = lambda n: n ** 2
+```
+
+### 2.6 Somme d'une liste de nombres
+```python
+from functools import reduce
+
+# Avec def
+def somme_liste(lst):
+    return sum(lst)
+
+# Avec lambda + reduce
+somme_liste_lambda = lambda lst: reduce(lambda x, y: x + y, lst)
+```
+
+### 2.7 Inverser un mot
+```python
+# Avec def
+def inverser(mot):
+    return mot[::-1]
+
+# Avec lambda
+inverser_lambda = lambda mot: mot[::-1]
+```
+
+### 2.8 Trier une liste
+```python
+# Avec def
+def trier_liste(lst):
+    return sorted(lst)
+
+# Avec lambda
+trier_liste_lambda = lambda lst: sorted(lst)
+```
+
+### 2.9 Compter le nombre de voyelles dans un mot
+```python
+# Avec def
+def compter_voyelles(mot):
+    return sum(1 for lettre in mot if lettre in "aeiouAEIOU")
+
+# Avec lambda
+compter_voyelles_lambda = lambda mot: sum(1 for lettre in mot if lettre in "aeiouAEIOU")
+```
+
+### 2.10 Compter le nombre de mots dans une phrase
+```python
+# Avec def
+def compter_mots(phrase):
+    return len(phrase.split())
+
+# Avec lambda
+compter_mots_lambda = lambda phrase: len(phrase.split())
+```
+
+## 3. Conclusion
+L'utilisation des `lambda` est pratique pour des opérations simples, tandis que `def` est préférable pour des fonctions plus complexes. Avec ces concepts, nous pouvons écrire du code plus concis et efficace en Python.
+
+
 
 ### 5. Demander un mot et compter le nombre de voyelles (`a, e, i, o, u, y`) avec `while`.
 ```python
