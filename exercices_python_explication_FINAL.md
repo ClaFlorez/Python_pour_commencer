@@ -1,7 +1,3 @@
-<div style="display: flex; justify-content: center;">
-    <img src="./claud-iaca-noir.png" alt="Logo de claud-ia" width="23%" title="Logo de claud-ia">
-</div>
-
 # 🐍 Exercices Python — Explications détaillées
 
 Ce document contient des explications en français pour chaque exercice du fichier Python fourni. Il est destiné à une meilleure compréhension des concepts de programmation en Python.
@@ -199,8 +195,9 @@ def preparer_cafe():
     print(f"Préparation du café avec {eau} et {cafe}.")
     return "café prêt"
 ```
-🎬 Démonstration de fonctions appelées dans une autre fonction : un exemple réaliste.
-
+<div style="display: flex; justify-content: center;">
+    <img src="./claud-iaca-noir.png" alt="Logo de claud-ia" width="23%" title="Logo de claud-ia">
+</div>
 ---
 
-Ce document est maintenant complet ✅. Tu peux le télécharger, l'étudier et me demander de l'exporter si tu veux un `.md` prêt à l’emploi pour GitHub 📘💻.
+
