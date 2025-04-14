@@ -1,6 +1,6 @@
 # 🐍 Exercices Python — Explications détaillées
 
-![Logo CLAUDIA.ca](bb7785d3-3068-4af6-b8fb-82ee2f31f851.png)
+![Logo CLAUDIA.ca](claud-iaca-noir.png)
 
 Ce document contient des explications en français pour chaque exercice du fichier Python fourni. Il est destiné à une meilleure compréhension des concepts de programmation en Python.
 
