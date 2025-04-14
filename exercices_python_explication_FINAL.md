@@ -1,6 +1,8 @@
 # 🐍 Exercices Python — Explications détaillées
+<div style="display: flex; justify-content: center;">
+    <img src="./claud-iaca-noir.png" alt="Logo de claud-ia" width="33%" title="Logo de claud-ia">
+</div>
 
-![Logo CLAUDIA.ca](claud-iaca-noir.png)
 
 Ce document contient des explications en français pour chaque exercice du fichier Python fourni. Il est destiné à une meilleure compréhension des concepts de programmation en Python.
 
