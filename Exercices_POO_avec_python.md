@@ -188,5 +188,3 @@ class Archer(Personnage):
 
 ---
 
-> ✨ Ce fichier peut être utilisé comme base d’un mini-projet ou support pédagogique pour enseigner la POO en Python.
-
