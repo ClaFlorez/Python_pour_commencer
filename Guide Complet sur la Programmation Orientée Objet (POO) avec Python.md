@@ -81,7 +81,7 @@ class Rectangle:
 ### Définition
 
 Une méthode est une fonction à l'intérieur d'une classe.
-
+![@classmethod](code.png)
 ```python
 class MaClasse:
     def methode_instance(self, param):
